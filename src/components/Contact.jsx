@@ -10,6 +10,7 @@ import { Grid, List, ListItem, ListItemText } from "@material-ui/core";
 const useStyles = makeStyles((theme) => ({
   root: {
     maxWidth: 345,
+    minHeight: 300,
   },
   media: {
     height: 0,
@@ -50,13 +51,19 @@ export default function Contact({ contact }) {
           <div className={classes.demo}>
             <List>
               <ListItem>
-                <ListItemText primary={`Edad: ${contact.ageContact}`}></ListItemText>
+                <ListItemText
+                  primary={`Edad: ${contact.ageContact}`}
+                ></ListItemText>
               </ListItem>
               <ListItem>
-                <ListItemText primary={`Email: ${contact.emailContact}`}></ListItemText>
+                <ListItemText
+                  primary={`Email: ${contact.emailContact}`}
+                ></ListItemText>
               </ListItem>
               <ListItem>
-                <ListItemText primary={`País: ${contact.countryContact}`}></ListItemText>
+                <ListItemText
+                  primary={`País: ${contact.countryContact}`}
+                ></ListItemText>
               </ListItem>
             </List>
           </div>
