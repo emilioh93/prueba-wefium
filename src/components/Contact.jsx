@@ -35,7 +35,7 @@ export default function Contact({ contact }) {
   const classes = useStyles();
 
   return (
-    <Grid item xs={12} sm={3}>
+    <Grid item xs={12} sm={4} lg={3}>
       <Card className={classes.root}>
         <CardHeader
           avatar={
