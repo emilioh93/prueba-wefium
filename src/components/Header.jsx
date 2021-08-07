@@ -14,7 +14,19 @@ const Header = () => {
   return (
     <div className={classes.root}>
       <h1>Prueba WeFium</h1>
-      <span>Consultar repositorio de base de datos en </span>
+      <span>
+        Consultar repositorio de <strong>base de datos</strong>{" "}
+        <a target="_blank" href="https://github.com/emilioh93/wefiumbackend">
+          aquí.
+        </a>
+      </span>
+      <br />
+      <span>
+        Consultar repositorio <strong>frontend</strong>{" "}
+        <a target="_blank" href="https://github.com/emilioh93/prueba-wefium">
+          aquí.
+        </a>
+      </span>
     </div>
   );
 };

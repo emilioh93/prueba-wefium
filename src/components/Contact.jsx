@@ -30,31 +30,33 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function Contact() {
+export default function Contact({ contact }) {
   const classes = useStyles();
 
   return (
-    <Grid item xs={6} sm={3}>
+    <Grid item xs={12} sm={3}>
       <Card className={classes.root}>
         <CardHeader
           avatar={
-            <Avatar aria-label="recipe" className={classes.avatar}>
-              E
-            </Avatar>
+            <Avatar
+              aria-label="recipe"
+              src={contact.imgContact}
+              className={classes.avatar}
+            ></Avatar>
           }
-          title="Emilio Ezequiel Hurtado"
+          title={contact.nameContact}
         />
         <CardContent>
           <div className={classes.demo}>
             <List>
               <ListItem>
-                <ListItemText primary="Edad: 27 años"></ListItemText>
+                <ListItemText primary={`Edad: ${contact.ageContact}`}></ListItemText>
               </ListItem>
               <ListItem>
-                <ListItemText primary="Email: emiliohurtado1@gmail.com"></ListItemText>
+                <ListItemText primary={`Email: ${contact.emailContact}`}></ListItemText>
               </ListItem>
               <ListItem>
-                <ListItemText primary="País: Argentina"></ListItemText>
+                <ListItemText primary={`País: ${contact.countryContact}`}></ListItemText>
               </ListItem>
             </List>
           </div>

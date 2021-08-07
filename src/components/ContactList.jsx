@@ -15,19 +15,16 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-export default function ContactList() {
+export default function ContactList({ contacts }) {
   const classes = useStyles();
 
   return (
     <Container className={classes.root}>
       <Grid container spacing={3}>
-        <Contact></Contact>
-        <Contact></Contact>
-        <Contact></Contact>
-        <Contact></Contact>
-        <Contact></Contact>
-        <Contact></Contact>
-        <Contact></Contact>
+        {contacts &&
+          contacts.map((contact) => (
+            <Contact key={contact._id} contact={contact}></Contact>
+          ))}
       </Grid>
     </Container>
   );
